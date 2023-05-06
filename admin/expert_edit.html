@@ -1,0 +1,25 @@
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<form action="" method="post"><table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="row">NAME</th>
+    <td><input type="text" name="textfield" class="form-control" id="textfield" value="{{ data['name'] }}"  required/></td>
+  </tr>
+
+  <tr>
+    <th scope="row">QUALIFICATION</th>
+    <td><select name="select" id="select" required><option>degree in meteorology</option>
+        <option>B.tech in meteorology</option>
+        <option>degree in meteorology</option>
+        <option>degree in physical science/option>
+        <option>degree in maths</option>
+        <option>degree in environmental science</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" scope="row"><input type="submit" name="button" id="button" class="btn btn-dark" value="Submit" /></td>
+    </tr>
+</table>
+
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "expert/expert_index.html" %}
+{% block body %}
+<form action="" method="get"><table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">DOUBT</th>
+    <th scope="col">DOUBT DATE</th>
+    <th scope="col">USER NAME</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i.doubt }}</td>
+    <td>&nbsp;{{ i.doubt_date }}</td>
+    <td>&nbsp;{{ i.name }}</td>
+    <td><a href="/send_reply/{{i.doubt_id }}">REPLY</a></td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+{% endblock %}

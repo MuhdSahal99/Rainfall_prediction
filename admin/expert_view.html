@@ -1,0 +1,23 @@
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<form action="" method="get"><table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">NAME</th>
+    <th scope="col">EMAIL</th>
+    <th scope="col">QUALIFICATION</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ loop.index }}</td>
+    <td>{{ i.name }}</td>
+    <td>&nbsp;{{ i.emailid }}</td>
+    <td>&nbsp;{{i.qualification }}</td>
+    <td><p><a href="/expert_delete/{{ i.expert_id }}">DELETE</a></p>
+      <p><a href="/expert_edit/{{ i.expert_id }}">EDIT</a></p></td>
+  </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

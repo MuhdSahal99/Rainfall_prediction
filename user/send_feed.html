@@ -1,0 +1,13 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action=""> <table width="200" border="1" class="table table-active">
+    <tr>
+      <th scope="row">FEEDBACK</th>
+      <td><textarea name="textarea" class="form-control" id="textarea" cols="45" rows="5" required></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" scope="row"><input type="submit" name="button" class="btn btn-dark" id="button" value="SEND" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<form action="" method="get"><table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">NAME</th>
+    <th scope="col">AREA</th>
+    <th scope="col">CITY</th>
+    <th scope="col">POST</th>
+    <th scope="col">DISTRICT</th>
+    <th scope="col">STATE</th>
+    <th scope="col">EMAIL</th>
+    <th scope="col">PHONE</th>
+    </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i.name }}</td>
+    <td>&nbsp;{{ i.area }}</td>
+    <td>&nbsp;{{ i.city }}</td>
+    <td>{{ i.post }}</td>
+    <td>&nbsp;{{ i.district }}</td>
+    <td>&nbsp;{{ i.state }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    </tr>
+    {%  endfor %}
+</table>
+</form>
+{% endblock %}

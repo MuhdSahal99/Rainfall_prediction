@@ -1,0 +1,29 @@
+
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<form action="/expert_add" method="post"><table width="200" border="1" align="center" class="table table-active">
+  <tr>
+    <th scope="row">NAME</th>
+    <td><input type="text" name="textfield" class="form-control" id="textfield" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">EMAIL ID</th>
+    <td><input type="text" name="textfield2"  class="form-control" id="textfield2" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">QUALIFICATION</th>
+      <td><input type="text" name="textfield4"  class="form-control" id="textfield4" required /></td>
+{#    <td><select name="select" id="select"><option>degree in meteorology</option>#}
+{#        <option>B.tech in meteorology</option>#}
+{#        <option>degree in meteorology</option>#}
+{#        <option>degree in physical science/option>#}
+{#        <option>degree in maths</option>#}
+{#        <option>degree in environmental science</option>#}
+{#    </select></td>#}
+  </tr>
+  <tr>
+    <td colspan="2" scope="row" align="center"><input type="submit" name="button" id="button" value="ADD" class="btn btn-dark" /></td>
+    </tr>
+</table>
+</form>
+{% endblock %}

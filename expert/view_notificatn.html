@@ -1,0 +1,22 @@
+{% extends "expert/expert_index.html" %}
+{% block body %}
+<form action="" method="get"><table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">EXPERT NAME</th>
+    <th scope="col">DATE</th>
+    <th scope="col">NOTIFICATION</th>
+    <th scope="col"></th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ loop.index }}</td>
+    <td>&nbsp;{{ i.expert_id }}</td>
+    <td>&nbsp;{{ i.date }}</td>
+    <td>{{ i.notification }}
+    <td><a href="/notification_delete/{{ i.notification_id }}">Delete</a> </td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "expert/expert_index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+
+    {% if data %}
+        <h3>{{ data }}</h3>
+        <h4>Accuracy : {{ acc }}%</h4>
+    {% endif %}
+<table  border="1">
+  <tr>
+    <td>Minimum temparature</td>
+    <td>
+      <input type="text" name="textfield" id="textfield" />
+    </td>
+  </tr>
+  <tr>
+    <td>Maximum temparature</td>
+    <td>
+      <input type="text" name="textfield2" id="textfield2" />
+    </td>
+  </tr>
+  <tr>
+    <td>WindSpeed 9:00 am</td>
+    <td>
+      <input type="text" name="textfield3" id="textfield3" />
+    </td>
+  </tr>
+  <tr>
+    <td height="30">WindSpeed 3:00 pm</td>
+    <td>
+      <input type="text" name="textfield4" id="textfield4" />
+   </td>
+  </tr>
+  <tr>
+    <td>Humidity 9:00 am</td>
+    <td>
+      <input type="text" name="textfield5" id="textfield5" />
+   </td>
+  </tr>
+  <tr>
+    <td>Humidity 3:00 pm</td>
+    <td>
+      <input type="text" name="textfield6" id="textfield6" />
+    </td>
+  </tr>
+  <tr>
+    <td>Temparature 9:00 am</td>
+    <td>
+      <input type="text" name="textfield7" id="textfield7" />
+    </td>
+  </tr>
+  <tr>
+    <td>Temparature 3:00 pm</td>
+    <td>
+      <input type="text" name="textfield8" id="textfield8" />
+    </td>
+  </tr>
+  <tr>
+    <td>RainFall Today</td>
+    <td>
+        <input type="text" name="textfield9" id="textfield9" />
+{#        <input type="radio" name="select" value="1"/>Yes&emsp;&emsp;<input type="radio" name="select" value="0"/>No#}
+{#      <select name="select" id="select" class="form-control">#}
+{#          <option value="1">Yes</option>#}
+{#          <option value="0">No</option>#}
+{#      </select>#}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" value="submit"/>
+    </td>
+  </tr>
+</table>
+</form>
+{% endblock %}

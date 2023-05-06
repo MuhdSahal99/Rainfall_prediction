@@ -1,0 +1,21 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+<form action="" method="get"><table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="col">SL NO</th>
+    <th scope="col">PREDICTION DATE</th>
+    <th scope="col">PREDICTION</th>
+
+
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{loop.index}}</td>
+      <td>{{i.date}}</td>
+    <td>{{i.prediction}}</td>
+
+  </tr>
+    {% endfor %}
+</table>
+</form>
+{% endblock %}
